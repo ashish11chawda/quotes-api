@@ -12,4 +12,4 @@ app.use('/quotes', quotesRoutes);
 
 app.get('/', (req, res) => {res.send("Hello World!")});
 
-app.listen(PORT, () => {console.log(`Server is running on port http://localhost:${PORT}`)});
+app.listen(PORT, () => {console.log(`Server is up and running!`)});
