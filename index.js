@@ -1,9 +1,10 @@
 import express from "express"; 
-import bodyParser from "body-parser"; // helps to parse the body of the request
-
+import bodyParser from "body-parser";// helps to parse the body of the request
+import cors from "cors";
 import quotesRoutes from "./routes/quotes.js";
 
 const app = express();
+app.use(cors());
 const PORT = process.env.PORT || 5000;
 
 app.use(bodyParser.json());
