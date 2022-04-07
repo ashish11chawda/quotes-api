@@ -4,7 +4,7 @@ import bodyParser from "body-parser"; // helps to parse the body of the request
 import quotesRoutes from "./routes/quotes.js";
 
 const app = express();
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 
 app.use(bodyParser.json());
 
