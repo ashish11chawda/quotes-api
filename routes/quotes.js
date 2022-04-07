@@ -24,7 +24,11 @@ router.get('/', (req, res) => {
 router.get('/:id', (req, res) => {
     let id = req.params.id;
     let quote = quotes.find(quote => quote.id === id);
-    res.send(quote);
+    if (quote) {
+        res.send(quote);
+    } else {
+        res.status(404).send("Quote not found");
+    }
 });
 
 router.post('/', (req, res) => {
